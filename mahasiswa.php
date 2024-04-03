@@ -1,13 +1,7 @@
 <?php
 include 'template/header.php';
 include 'template/side.php';
-
-$servername = "localhost";
-$database = "db_mahasiswa";
-$username = "root";
-$password = "";
-
-$conn = mysqli_connect($servername, $username, $password, $database);
+require 'koneksi.php';
 
 $query = "SELECT * FROM mahasiswa JOIN prodi ON mahasiswa.id_prodi = prodi.id_prodi";
 $hasil = mysqli_query($conn, $query);
