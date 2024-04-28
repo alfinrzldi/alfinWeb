@@ -1,7 +1,10 @@
 <?php
+session_start();
+require 'koneksi.php';
+ceklogin();
 include 'template/header.php';
 include 'template/side.php';
-require 'koneksi.php';
+
 
 $id = $_GET['id_prodi'];
 
@@ -41,7 +44,7 @@ $data = mysqli_fetch_assoc($hasil);
         <!-- left column -->
         <div class="col-md-12">
           <!-- jquery validation -->
-          <div class="card card-primary">
+          <div class="card card-warning">
             <div class="card-header">
               <h3 class="card-title">Edit Program Studi</h3>
             </div>
@@ -52,13 +55,12 @@ $data = mysqli_fetch_assoc($hasil);
                 <div class="form-group">
                   <input type="hidden" name="id_prodi" class="form-control" value="<?= $data['id_prodi'] ?>">
                   <label for="namaprodi">Nama Program Studi</label>
-                  <input type="text" name="namaprodi" class="form-control" id="namaprodi"
-                    value="<?= $data['nama_prodi'] ?>">
+                  <input type="text" name="namaprodi" class="form-control" id="namaprodi" value="<?= $data['nama_prodi'] ?>">
                 </div>
               </div>
               <!-- /.card-body -->
               <div class="card-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-warning">Submit</button>
               </div>
             </form>
           </div>

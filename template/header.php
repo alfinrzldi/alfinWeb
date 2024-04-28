@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Poliban Jaya Jaya</title>
+  <title>Data Mahasiswa Poliban</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -29,8 +30,9 @@
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
- <!-- Navbar -->
- <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -47,9 +49,15 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->
+      
+
+      <!-- Messages Dropdown Menu -->
+      
+      <!-- Notifications Dropdown Menu -->
       <li class="nav-item">
-        <a class="nav-link" data-widget="navbar-search" href="#" role="button">Logout
-          <i class="fas fa-sign-out-alt"></i>
+        <a class="nav-link" href="logout.php">
+          Logout<i class="fas fa-sign-out-alt"></i> 
         </a>
       </li>
+    </ul>
   </nav>

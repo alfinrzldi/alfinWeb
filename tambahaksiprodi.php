@@ -1,6 +1,7 @@
 <?php
+session_start();
 require 'koneksi.php';
-
+ceklogin();
 $prodi = $_POST['namaprodi'];
 
 $query ="INSERT INTO prodi (nama_prodi) VALUES ('$prodi')";

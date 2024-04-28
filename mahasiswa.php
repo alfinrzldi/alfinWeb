@@ -1,7 +1,10 @@
 <?php
+session_start();
+require 'koneksi.php';
+ceklogin();
 include 'template/header.php';
 include 'template/side.php';
-require 'koneksi.php';
+
 
 $query = "SELECT * FROM mahasiswa JOIN prodi ON mahasiswa.id_prodi = prodi.id_prodi";
 $hasil = mysqli_query($conn, $query);
@@ -44,7 +47,7 @@ while ($baris = mysqli_fetch_assoc($hasil)) {
 
               <div class="card-tools">
               <div class="card-tools">
-              <a href="tambahmahasiswa.php" class="btn btn-primary">Tambah</a>
+              <a href="tambahmahasiswa.php" class="btn btn-warning">Tambah</a>
                 </div>
               </div>
             </div>
@@ -76,7 +79,7 @@ while ($baris = mysqli_fetch_assoc($hasil)) {
                       <td><?php echo $d['no_hp'] ?>
                       <td><?php echo $d['alamat'] ?></td>
                       <td> <img src="dist/img/<?php echo $d['foto'] ?>" width="50px" height="50px" /> </td>
-                      <td><a href="editmahasiswa.php?nim=<?= $d['nim'] ?>" class="btn btn-warning" >Edit</a>
+                      <td><a href="editmahasiswa.php?nim=<?= $d['nim'] ?>" class="btn btn-primary" >Edit</a>
                     <a href="hapusmahasiswa.php?nim=<?= $d['nim'] ?>" class="btn btn-danger" >Hapus</a>
                     </td>
                     </tr>
