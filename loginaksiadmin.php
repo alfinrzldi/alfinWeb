@@ -2,18 +2,20 @@
 session_start();
 require "koneksi.php";
 
-$nim = $_POST['nim'];
+$user = $_POST['user'];
 $password = $_POST['password'];
 
-$result = mysqli_query($conn, "SELECT * FROM mahasiswa WHERE nim='$nim'");
+$result = mysqli_query($conn, "SELECT * FROM admin WHERE user='$user'");
 
 $row = mysqli_fetch_assoc($result);
 
+
+
 if (password_verify ($password, $row['password'])){
     $_SESSION['login'] = true;
-    $_SESSION['nama'] = $row['nama'];
-    $_SESSION['foto'] = $row['foto'];
-    $_SESSION['hakakses'] = 'mahasiswa';
+    $_SESSION['nama'] = $row['user'];
+    $_SESSION['foto'] = 'poison.jpg';
+    $_SESSION['hakakses'] = 'admin';
      header("location: index.php");
 } else {
     echo "
@@ -23,5 +25,6 @@ if (password_verify ($password, $row['password'])){
             </script>
     ";
 }
+
 
 ?>
