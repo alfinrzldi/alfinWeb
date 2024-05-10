@@ -17,7 +17,7 @@ mysqli_query($conn, $query);
 if (mysqli_affected_rows($conn) > 0) {
     echo "
             <script>
-            alert('Data Berhasil Ditambahkan');
+            alert('Data Berhasil Diubah');
             document.location.href='prodi.php';
             </script>
     ";
